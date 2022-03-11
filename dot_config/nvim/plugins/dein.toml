@@ -1,0 +1,36 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# ====== theme ========
+[[plugins]]
+repo = 'rebelot/kanagawa.nvim'
+hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/kanagawa.lua'"
+
+# ==== neovim libs ====
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+# ====== lsp =========
+[[plugins]]
+repo		= 'neovim/nvim-lspconfig'
+depends		= 'plenary.nvim'
+hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
+[[plugins]]
+repo							= 'williamboman/nvim-lsp-installer'
+hook_add					= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
+
+# for generating statusline components from the built-in LSP client.
+[[plugins]]
+repo = 'nvim-lua/lsp-status.nvim'
+
+# ====== deno ========
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo		= 'Shougo/ddc.vim'
+depends		= ['denops.vim']
+hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/ddc.vim'"
+[[multiple_plugins]]
+plugins	= ['Shougo/ddc-nvim-lsp', 'Shougo/ddc-nvim-lsp-doc', 'Shougo/ddc-around', 'Shougo/ddc-nextword', 'Shougo/ddc-converter_remove_overlap', 'Shougo/ddc-matcher_head', 'Shougo/ddc-sorter_rank', 'LumaKernel/ddc-file']
+depends	= ['ddc.vim']
