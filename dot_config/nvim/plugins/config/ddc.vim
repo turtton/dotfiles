@@ -1,21 +1,21 @@
 " Customize global settings
 call ddc#custom#patch_global('sources', ['nvim-lsp', 'around', 'deoppet', 'vsnip'])
-call ddc#custom#patch_global('completionMenu', 'pum.vim')
+""call ddc#custom#patch_global('completionMenu', 'pum.vim')
 " Change source options
 call ddc#custom#patch_global('sourceOptions', {
       \ '_': {
       \   'matchers': ['matcher_head'],
       \   'sorters': ['sorter_rank'],
-			\		'converters': [] },
+			\		'converters': ['converter_remove_overlap'] },
 			\ 'around': {'mark': 'A'},
-			\	'deoppet': {'dup': v:true, 'mark': 'dp'},
 			\	'nvim-lsp': {
-			\		'mark': 'lsp',
+			\		'mark': 'L',
 			\		'forceCompletionPattern': '\.\w*|:\w*|->\w*' },
+			\	'deoppet': {'dup': v:true, 'mark': 'dp'},
 			\ })
+
 call ddc#custom#patch_global('sourceParams', {
       \		'around': {'maxSize': 500},
-			\		'nvim-lsp': {'kindLabels': {'Class': 'c'}},
       \ })
 
 " Customize settings on a filetype

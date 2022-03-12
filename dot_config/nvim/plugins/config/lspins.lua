@@ -42,9 +42,17 @@ for _,language in ipairs(languages) do
 		}
 
 		if server.name == "sumneko_lua" then
-			opts.hint= {
-				enable = true,
-			}
+			opts.Lua = {
+				hint= {
+					enable = true,
+				},
+				diagnostics = {
+					globals = {'vim'},
+				},
+				telemetry = {
+					enable = false,
+				},
+			},		
 		end
     -- (optional) Customize the options passed to the server
     -- if server.name == "tsserver" then
