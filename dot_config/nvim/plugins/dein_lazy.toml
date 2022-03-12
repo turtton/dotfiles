@@ -2,6 +2,12 @@
 [[plugins]]
 repo = 'scalameta/nvim-metals'
 depends = ['plenary.nvim']
+hook_add = '''
+augroup lsp
+	au!
+	au FileType scala,sbt lua require('metals').initialize_or_attach({})
+augroup end
+'''
 
 #  -- completion plugins --
 [[plugins]]
