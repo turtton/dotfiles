@@ -9,28 +9,59 @@ hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/kanagawa.lua'"
 # ==== neovim libs ====
 [[plugins]]
 repo = 'nvim-lua/plenary.nvim'
+# popup lib
+[[plugins]]
+repo = 'Shougo/pum.vim'
 
 # ====== lsp =========
 [[plugins]]
 repo		= 'neovim/nvim-lspconfig'
 depends		= 'plenary.nvim'
-hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
+hook_post_source	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
+
 [[plugins]]
 repo							= 'williamboman/nvim-lsp-installer'
-hook_add					= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
+hook_post_source	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
 
 # for generating statusline components from the built-in LSP client.
 [[plugins]]
 repo = 'nvim-lua/lsp-status.nvim'
 
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip'
+hook_post_source = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/vim-vsnip.vim'"
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip-integ'
+depends = 'vim-vsnip'
+hook_post_source = 'autocmd User PumCompleteDone call vsnip_integ#on_complete_done(g:pum#completed_item)'
+
 # ====== deno ========
 [[plugins]]
 repo = 'vim-denops/denops.vim'
-
+# completion plugins
 [[plugins]]
 repo		= 'Shougo/ddc.vim'
 depends		= ['denops.vim']
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/ddc.vim'"
-[[multiple_plugins]]
-plugins	= ['Shougo/ddc-nvim-lsp', 'Shougo/ddc-nvim-lsp-doc', 'Shougo/ddc-around', 'Shougo/ddc-nextword', 'Shougo/ddc-converter_remove_overlap', 'Shougo/ddc-matcher_head', 'Shougo/ddc-sorter_rank', 'LumaKernel/ddc-file']
-depends	= ['ddc.vim']
+
+# ddc addons
+[[plugins]]
+repo = 'Shougo/ddc-nvim-lsp'
+depends = ['nvim-lspconfig', 'ddc.vim']
+[[plugins]]
+repo = 'Shougo/ddc-around'
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+[[plugins]]
+rpeo = 'Shougo/ddc-sorter_rank'
+[[plugins]]
+repo			= 'Shougo/deoppet.nvim'
+hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/deoppet.vim'"
+[[plugins]]
+repo = 'LumaKernel/ddc-file'
+[[plugins]]
+repo = 'matsui54/denops-popup-preview.vim'
+hook_post_source = 'call popup_preview#enable()'
+[[plugins]]
+repo = 'matsui54/denops-signature_help'
+hook_post_source = 'call signature_help#enable()'
