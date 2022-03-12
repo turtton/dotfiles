@@ -52,7 +52,7 @@ for _,language in ipairs(languages) do
 				telemetry = {
 					enable = false,
 				},
-			},		
+			}		
 		end
     -- (optional) Customize the options passed to the server
     -- if server.name == "tsserver" then
