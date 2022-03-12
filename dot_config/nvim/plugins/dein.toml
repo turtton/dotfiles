@@ -48,4 +48,6 @@ hook_add = 'nnoremap <silent> fw :Fern . -drawer<CR>'
 
 # kakko
 [[plugins]]
+repo = 'lexima.vim'
+[[plugins]]
 repo = 'machakann/vim-sandwich'
