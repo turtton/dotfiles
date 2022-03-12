@@ -42,3 +42,9 @@ hook_add = 'call popup_preview#enable()'
 repo = 'matsui54/denops-signature_help'
 depends = ['ddc.vim']
 hook_add = 'call signature_help#enable()'
+
+# skk
+[[plugins]]
+repo = 'vim-skk/skkeleton'
+depends = ['ddc.vim']
+hook_add = "exec 'call' . g:PLUGIN_CONFIG_DIR . '/skkeleton.vim'"
