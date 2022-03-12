@@ -1,6 +1,6 @@
 " Customize global settings
-call ddc#custom#patch_global('sources', ['nvim-lsp', 'around', 'deoppet', 'vsnip'])
-""call ddc#custom#patch_global('completionMenu', 'pum.vim')
+call ddc#custom#patch_global('sources', ['nvim-lsp', 'around', 'deoppet'])
+"call ddc#custom#patch_global('completionMenu', 'pum.vim')
 " Change source options
 call ddc#custom#patch_global('sourceOptions', {
       \ '_': {
@@ -11,7 +11,7 @@ call ddc#custom#patch_global('sourceOptions', {
 			\	'nvim-lsp': {
 			\		'mark': 'L',
 			\		'forceCompletionPattern': '\.\w*|:\w*|->\w*' },
-			\	'deoppet': {'dup': v:true, 'mark': 'dp'},
+			\ 'deoppet': { 'dup': v:true, 'mark': 'dp'},
 			\ })
 
 call ddc#custom#patch_global('sourceParams', {

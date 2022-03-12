@@ -20,7 +20,7 @@ on_event = 'BufEnter'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
 
 [[plugins]]
-repo							= 'williamboman/nvim-lsp-installer'
+repo			= 'williamboman/nvim-lsp-installer'
 on_source = 'nvim-lspconfig'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
 

@@ -1,4 +1,4 @@
-#  -- completion plugsins --
+#  -- completion plugins --
 [[plugins]]
 repo		= 'Shougo/ddc.vim'
 on_event = 'InsertEnter'
