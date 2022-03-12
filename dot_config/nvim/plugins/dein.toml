@@ -12,6 +12,13 @@ repo = 'nvim-lua/plenary.nvim'
 # popup lib
 [[plugins]]
 repo = 'Shougo/pum.vim'
+# deno
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+# fix 
+[[plugins]]
+repo = 'antoinemadec/FixCursorHold.nvim'
 
 # ====== lsp =========
 [[plugins]]
@@ -33,6 +40,8 @@ hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/vim-vsnip.vim'"
 repo = 'hrsh7th/vim-vsnip-integ'
 hook_add = 'autocmd User PumCompleteDone call vsnip_integ#on_complete_done(g:pum#completed_item)'
 
-# ====== deno ========
+# ===== others =====
+# file tree
 [[plugins]]
-repo = 'vim-denops/denops.vim'
+repo = 'lambdalisue/fern.vim'
+hook_add = 'nnoremap <silent> fw :Fern . -drawer<CR>'
