@@ -16,12 +16,10 @@ repo = 'Shougo/pum.vim'
 # ====== lsp =========
 [[plugins]]
 repo		= 'neovim/nvim-lspconfig'
-on_event = 'BufEnter'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
 
 [[plugins]]
 repo			= 'williamboman/nvim-lsp-installer'
-on_source = 'nvim-lspconfig'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
 
 # for generating statusline components from the built-in LSP client.
@@ -33,7 +31,6 @@ repo = 'hrsh7th/vim-vsnip'
 hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/vim-vsnip.vim'"
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip-integ'
-depends = 'vim-vsnip'
 hook_add = 'autocmd User PumCompleteDone call vsnip_integ#on_complete_done(g:pum#completed_item)'
 
 # ====== deno ========

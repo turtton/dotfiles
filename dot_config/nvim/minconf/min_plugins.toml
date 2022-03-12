@@ -5,8 +5,7 @@ hook_add = 'colorscheme kanagawa'
 [[plugins]]
 repo = 'Shougo/ddc.vim'
 hook_add = """
-" ddc settings
-call ddc#custom#patch_global('sources', ['around'])
+call ddc#custom#patch_global('sources', ['around', 'nvim-lsp'])
 call ddc#custom#patch_global('sourceOptions', {
 			\ '_': { 'matchers': ['matcher_head'], 'sorters': ['sorter_rank'], 'converters': ['converter_remove_overlap'] },
 			\ 'nvim-lsp': {'mark': 'L', 'forceCompletionPattern': '\.\w*|:\w*|->\w*' },
