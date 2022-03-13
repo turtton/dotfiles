@@ -23,11 +23,9 @@ if dein#load_state(s:dein_dir)
 	" toml files
 	let g:rc_dir		= expand('~/.config/nvim/plugins')
 	let s:toml			= g:rc_dir . '/dein.toml'
-	let s:lazy_toml	= g:rc_dir . '/dein_lazy.toml'
 
 	" cache TOML files
 	call dein#load_toml(s:toml,				{'lazy': 0})
-	call dein#load_toml(s:lazy_toml,	{'lazy': 1})
 
 	" save
 	call dein#end()
