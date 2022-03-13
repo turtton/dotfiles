@@ -26,8 +26,11 @@ repo			= 'williamboman/nvim-lsp-installer'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
 
 # ==== useful utils ====
+# auto close brackets
 [[plugins]]
 repo = 'higashi000/dps-kakkonan'
+[[plugins]]
+repo = 'machakann/vim-sandwich'
 
 #  -- completion plugins --
 [[plugins]]
