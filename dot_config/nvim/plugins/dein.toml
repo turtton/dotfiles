@@ -48,6 +48,7 @@ hook_add = 'nnoremap <silent> fw :Fern . -drawer<CR>'
 
 # kakko
 [[plugins]]
-repo = 'lexima.vim'
+repo = 'cohama/lexima.vim'
+hook_add = 'let g:lexima_enable_basic_true=1'
 [[plugins]]
 repo = 'machakann/vim-sandwich'
