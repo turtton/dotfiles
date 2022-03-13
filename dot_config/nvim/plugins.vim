@@ -51,5 +51,3 @@ if dein#check_install()
  call dein#install()
 endif
 
-autocmd VimEnter * call dein#call_hook('post_source')
-<

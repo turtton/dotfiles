@@ -1,11 +1,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# ====== theme ========
-[[plugins]]
-repo = 'rebelot/kanagawa.nvim'
-hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/kanagawa.lua'"
-
 # ==== neovim libs ====
 [[plugins]]
 repo = 'nvim-lua/plenary.nvim'
@@ -25,19 +20,3 @@ hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
 repo			= 'williamboman/nvim-lsp-installer'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
 
-#  -- completion plugins --
-[[plugins]]
-repo		= 'Shougo/ddc.vim'
-hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/ddc.vim'"
-
-# ddc addons
-[[plugins]]
-repo = 'Shougo/ddc-nvim-lsp'
-[[plugins]]
-repo = 'Shougo/ddc-around'
-[[plugins]]
-repo = 'Shougo/ddc-matcher_head'
-[[plugins]]
-repo = 'Shougo/ddc-sorter_rank'
-[[plugins]]
-repo = 'Shougo/ddc-converter_remove_overlap'
