@@ -32,6 +32,11 @@ repo = 'higashi000/dps-kakkonan'
 [[plugins]]
 repo = 'machakann/vim-sandwich'
 
+#file-tree
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+hook_add = 'nnoremap <silent> fw :Fern . -drawer -reveal=%<CR>'
+
 #  -- completion plugins --
 [[plugins]]
 repo		= 'Shougo/ddc.vim'
