@@ -16,10 +16,6 @@ repo = 'Shougo/pum.vim'
 [[plugins]]
 repo = 'vim-denops/denops.vim'
 
-# fix 
-[[plugins]]
-repo = 'antoinemadec/FixCursorHold.nvim'
-
 # ====== lsp =========
 [[plugins]]
 repo		= 'neovim/nvim-lspconfig'
@@ -29,26 +25,19 @@ hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
 repo			= 'williamboman/nvim-lsp-installer'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
 
-# for generating statusline components from the built-in LSP client.
+#  -- completion plugins --
 [[plugins]]
-repo = 'nvim-lua/lsp-status.nvim'
+repo		= 'Shougo/ddc.vim'
+hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/ddc.vim'"
 
+# ddc addons
 [[plugins]]
-repo = 'hrsh7th/vim-vsnip'
-hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/vim-vsnip.vim'"
+repo = 'Shougo/ddc-nvim-lsp'
 [[plugins]]
-repo = 'hrsh7th/vim-vsnip-integ'
-hook_add = 'autocmd User PumCompleteDone call vsnip_integ#on_complete_done(g:pum#completed_item)'
-
-# ===== others =====
-# file tree
+repo = 'Shougo/ddc-around'
 [[plugins]]
-repo = 'lambdalisue/fern.vim'
-hook_add = 'nnoremap <silent> fw :Fern . -drawer<CR>'
-
-# kakko
+repo = 'Shougo/ddc-matcher_head'
 [[plugins]]
-repo = 'cohama/lexima.vim'
-hook_add = 'let g:lexima_enable_basic_true=1'
+repo = 'Shougo/ddc-sorter_rank'
 [[plugins]]
-repo = 'machakann/vim-sandwich'
+repo = 'Shougo/ddc-converter_remove_overlap'
