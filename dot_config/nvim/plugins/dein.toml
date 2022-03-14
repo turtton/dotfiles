@@ -47,6 +47,11 @@ repo = 'echasnovski/mini.nvim'
 rev = 'stable'
 hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/mini.lua'"
 
+# ====== git ======
+[[plugins]]
+repo = 'lewis6991/gitsigns.nvim'
+hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/gitsigns.lua'"
+
 #  -- completion plugins --
 [[plugins]]
 repo		= 'Shougo/ddc.vim'
