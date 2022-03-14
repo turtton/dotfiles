@@ -35,7 +35,7 @@ hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/metals.vim'"
 #file-tree
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
-hook_add = 'nnoremap <silent> fw :Fern . -drawer -reveal=%<CR>'
+hook_add = 'nnoremap <silent> wf :Fern . -drawer -reveal=%<CR>'
 
 # mini(huge) functional utils
 [[plugins]]
