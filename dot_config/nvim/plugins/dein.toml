@@ -15,6 +15,10 @@ repo = 'Shougo/pum.vim'
 # deno
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+# icons
+[[plugins]]
+repo = 'kyazdani42/nvim-web-devicons'
+hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/devicons.lua'"
 
 # ====== lsp =========
 [[plugins]]
