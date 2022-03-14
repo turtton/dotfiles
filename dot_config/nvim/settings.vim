@@ -1,11 +1,16 @@
 " mapleader
-let mapleader='\<SPACE>'
+let mapleader='\<20>'
 " enable reaload
 set autoread
 " precent creating swapfile and backupfile
 set noswapfile
 set nobackup
 set nowritebackup
+
+" enable incremental seaching 
+set incsearch
+" dynamic mouse scroll
+set scrolloff=5
 
 " -- display --
 set number
