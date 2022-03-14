@@ -46,6 +46,11 @@ hook_add = 'nnoremap <silent> wf :Fern . -drawer -reveal=%<CR>'
 repo = 'folke/which-key.nvim'
 hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/which-key.lua'"
 
+# improve asterisk searching
+[[plugin]]
+repo = 'haya14busa/vim-asterisk'
+hook_add = "exec . 'source' . g:PLUGIN_CONFIG_DIR . '/asterisk.vim'"
+
 # mini(huge) functional utils
 [[plugins]]
 repo = 'echasnovski/mini.nvim'
