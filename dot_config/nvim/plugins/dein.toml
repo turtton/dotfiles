@@ -32,16 +32,16 @@ depends = ['plenary.nvim']
 hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/metals.vim'"
 
 # ==== useful utils ====
-# auto close brackets
-[[plugins]]
-repo = 'higashi000/dps-kakkonan'
-[[plugins]]
-repo = 'machakann/vim-sandwich'
-
 #file-tree
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = 'nnoremap <silent> fw :Fern . -drawer -reveal=%<CR>'
+
+# mini(huge) functional utils
+[[plugins]]
+repo = 'echasnovski/mini.nvim'
+rev = 'stable'
+hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/mini.lua'"
 
 #  -- completion plugins --
 [[plugins]]
