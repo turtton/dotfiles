@@ -24,10 +24,13 @@ if dein#load_state(s:dein_dir)
 	let s:rc_dir		= expand(g:NVIM_CONFIG_DIR . '/plugins')
 	let s:toml			= s:rc_dir . '/dein.toml'
 	let s:ddc_toml	= s:rc_dir . '/comp_ddc.toml'
+	let s:coc_toml	= s:rc_dir . '/comp_coc.toml'
 
 	" cache TOML files
 	call dein#load_toml(s:toml,				{'lazy': 0})
-	call dein#load_toml(s:ddc_toml,		{'lazy': 0})
+
+	call dein#load_toml(s:coc_toml,		{'lazy': 0})
+	" call dein#load_toml(s:ddc_toml,		{'lazy': 0})
 
 	" save
 	call dein#end()
