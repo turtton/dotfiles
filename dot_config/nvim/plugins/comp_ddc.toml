@@ -13,3 +13,11 @@ repo = 'Shougo/ddc-matcher_head'
 repo = 'Shougo/ddc-sorter_rank'
 [[plugins]]
 repo = 'Shougo/ddc-converter_remove_overlap'
+
+# other
+# scala LS
+[[plugins]]
+repo = 'scalameta/nvim-metals'
+depends = ['plenary.nvim']
+hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/metals.vim'"
+

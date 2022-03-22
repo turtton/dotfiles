@@ -29,12 +29,6 @@ hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
 repo			= 'williamboman/nvim-lsp-installer'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
 
-# scala LS
-[[plugins]]
-repo = 'scalameta/nvim-metals'
-depends = ['plenary.nvim']
-hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/metals.vim'"
-
 # syntax highlight
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
