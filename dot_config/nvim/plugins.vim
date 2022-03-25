@@ -29,8 +29,8 @@ if dein#load_state(s:dein_dir)
 	" cache TOML files
 	call dein#load_toml(s:toml,				{'lazy': 0})
 
-	call dein#load_toml(s:coc_toml,		{'lazy': 0})
-	" call dein#load_toml(s:ddc_toml,		{'lazy': 0})
+	"  call dein#load_toml(s:coc_toml,		{'lazy': 0})
+	call dein#load_toml(s:ddc_toml,		{'lazy': 0})
 
 	" save
 	call dein#end()
