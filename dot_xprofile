@@ -3,6 +3,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 fcitx
 
-if command -v feh &> /dev/null then
+if command -v feh &> /dev/null; then
 	sh ~/.fehbg
 fi
