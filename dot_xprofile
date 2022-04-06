@@ -1,7 +1,9 @@
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-fcitx
+if command -v fcitx5 &> /dev/null; then
+	export GTK_IM_MODULE=fcitx
+	export QT_IM_MODULE=fcitx
+	export XMODIFIERS=@im=fcitx
+	fcitx5
+fi
 
 if command -v 1password &> /dev/null; then
 	1password
