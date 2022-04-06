@@ -3,6 +3,14 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 fcitx
 
+if command -v 1password &> /dev/null; then
+	1password
+fi
+
+#if command -v dunst &> /dev/null; then
+#	dunst
+#fi
+
 if command -v feh &> /dev/null; then
 	sh ~/.fehbg
 fi
