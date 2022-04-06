@@ -188,7 +188,7 @@ bindsym $mod+Shift+Print --release exec --no-startup-id mate-screenshot -ca
 # finds out, if available)
 bar {
         status_command bumblebee-status \
-        -m title arch-update cmus cpu memory nic battery amixer date time spacer\
+        -m title arch-update cmus cpu memory nic bluetooth2 brightness battery amixer date time spacer\
         -p time.format="%H:%M" date.format="%m/%d" memory.format=" {percent:05.02f}%" title.max=50 title.scroll=True spacer.text="  "\
         -t iceberg-darker-powerline
 }
