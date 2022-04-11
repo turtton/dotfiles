@@ -13,6 +13,8 @@ repo = 'Shougo/ddc-matcher_head'
 repo = 'Shougo/ddc-sorter_rank'
 [[plugins]]
 repo = 'Shougo/ddc-converter_remove_overlap'
+[[plugins]]
+repo = 'tani/ddc-path'
 
 # other
 # scala LS
