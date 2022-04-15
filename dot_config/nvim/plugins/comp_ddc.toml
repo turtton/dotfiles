@@ -14,7 +14,7 @@ repo = 'Shougo/ddc-sorter_rank'
 [[plugins]]
 repo = 'Shougo/ddc-converter_remove_overlap'
 [[plugins]]
-repo = 'tani/ddc-path'
+repo = 'Shougo/ddc-zsh'
 
 # other
 # scala LS
