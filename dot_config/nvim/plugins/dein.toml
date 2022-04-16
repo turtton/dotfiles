@@ -57,6 +57,11 @@ repo = 'echasnovski/mini.nvim'
 rev = 'stable'
 hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/mini.lua'"
 
+#browser integration
+[[plugins]]
+repo = 'glacambre/firenvim'
+hook_post_update = "call firenvim#install(0)"
+
 # ====== git ======
 [[plugins]]
 repo = 'lewis6991/gitsigns.nvim'
