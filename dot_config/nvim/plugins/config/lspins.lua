@@ -24,7 +24,7 @@ local function on_attach(_, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-local languages = {'sumneko_lua', 'vimls', 'nimls', 'taplo', 'yamlls', 'tsserver', 'jsonls', 'kotlin_language_server'}
+local languages = {'sumneko_lua', 'vimls', 'bashls', 'nimls', 'taplo', 'yamlls', 'tsserver', 'jsonls', 'kotlin_language_server'}
 for _,language in ipairs(languages) do
 	local isAvailable, server = lsp_servers.get_server(language)
 	if not isAvailable then
