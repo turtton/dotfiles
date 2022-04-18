@@ -9,6 +9,22 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# from https://github.com/sheepla/dotfiles/blob/main/config/i3/config
+# colorscheme
+set $fg      "#c6c8d1"
+set $fg2     "#444b71"
+set $bg      "#161821"
+set $bg2     "#1e2132"
+set $bg3     "#262939"
+set $bg4     "#454B68"
+set $red     "#e27878"
+set $yellow  "#e2a478"
+set $green   "#b4be82"
+set $cyan    "#89b8c2"
+set $blue    "#84a0c6"
+set $purple  "#a093c7"
+set $gray    "#818596"
+
 # window gaps
 gaps top 5
 gaps bottom 5
@@ -201,3 +217,14 @@ bar {
         -p time.format="%H:%M" date.format="%m/%d" memory.format=" {percent:05.02f}%" title.max=50 title.scroll=True spacer.text="  "\
         -t iceberg-darker-powerline
 }
+
+# window
+# <class>               <border> <background> <foreground> <indicator> <child_border>
+client.focused          $bg2     $bg3         $fg          $gray       $blue
+client.focused_inactive $bg2     $bg          $gray        $gray       $bg2
+client.unfocused        $bg2     $bg          $gray        $gray       $bg2
+client.urgent           $bg2     $red         $bg          $gray       $bg2
+client.placeholder      $bg2     $green       $bg          $gray       $bg2
+client.background $bg
+title_align center
+# }}}
