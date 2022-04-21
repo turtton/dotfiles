@@ -1,5 +1,5 @@
 " Customize global settings
-call ddc#custom#patch_global('sources', ['nvim-lsp', 'around', 'zsh'])
+call ddc#custom#patch_global('sources', ['nvim-lsp', 'around', 'zsh', 'skkeleton'])
 "call ddc#custom#patch_global('completionMenu', 'pum.vim')
 " Change source options
 call ddc#custom#patch_global('sourceOptions', {
@@ -11,7 +11,8 @@ call ddc#custom#patch_global('sourceOptions', {
 			\	'nvim-lsp': {
 			\		'mark': 'L',
 			\		'forceCompletionPattern': '\.\w*|:\w*|->\w*' },
-			\ 'zsh': {'mark': 'Z'}
+			\ 'zsh': {'mark': 'Z'},
+			\ 'skkeleton': {'mark': 'SKK', 'matchers': 'skkeleton', 'minAutoCompleteLength': 2},
 			\ })
 
 " Customize settings on a filetype

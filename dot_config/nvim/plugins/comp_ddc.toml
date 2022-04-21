@@ -15,6 +15,9 @@ repo = 'Shougo/ddc-sorter_rank'
 repo = 'Shougo/ddc-converter_remove_overlap'
 [[plugins]]
 repo = 'Shougo/ddc-zsh'
+[[plugins]]
+repo = 'vim-skk/skkeleton'
+hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/skkeleton.vim'"
 
 # other
 # scala LS
