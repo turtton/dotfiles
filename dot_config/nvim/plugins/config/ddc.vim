@@ -12,7 +12,7 @@ call ddc#custom#patch_global('sourceOptions', {
 			\		'mark': 'L',
 			\		'forceCompletionPattern': '\.\w*|:\w*|->\w*' },
 			\ 'zsh': {'mark': 'Z'},
-			\ 'skkeleton': {'mark': 'SKK', 'matchers': 'skkeleton', 'minAutoCompleteLength': 2},
+			\ 'skkeleton': {'mark': 'SKK', 'matchers': ['skkeleton'], 'minAutoCompleteLength': 2},
 			\ })
 
 " Customize settings on a filetype
