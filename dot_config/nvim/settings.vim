@@ -1,5 +1,5 @@
 " mapleader
-let mapleader='\<20>'
+let mapleader=' '
 " enable reaload
 set autoread
 " precent creating swapfile and backupfile
