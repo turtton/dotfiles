@@ -24,7 +24,7 @@ local function on_attach(_, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-local languages = {'sumneko_lua', 'vimls', 'bashls', 'nimls', 'taplo', 'yamlls', 'tsserver', 'jsonls', 'kotlin_language_server'}
+local languages = {'sumneko_lua', 'vimls', 'bashls', 'nimls', 'taplo', 'yamlls', 'tsserver', 'jsonls', 'kotlin_language_server', 'rust_analyzer'}
 for _,language in ipairs(languages) do
 	local isAvailable, server = lsp_servers.get_server(language)
 	if not isAvailable then
@@ -52,13 +52,22 @@ for _,language in ipairs(languages) do
 				telemetry = {
 					enable = false,
 				},
-			}		
+			}
+		end
+
+		if server.name == "rust_analyzer" then
+			require("rust-tools").setup {
+				server = vim.tbl_deep_extend("force", server:get_default_options(), opts)
+			}
+			server:attach_buffers()
+			require("rust-tools").start_standalone_if_required()
+		else
+			server:setup(opts)
 		end
     -- (optional) Customize the options passed to the server
     -- if server.name == "tsserver" then
     --     opts.root_dir = function() ... end
     -- end
-		server:setup(opts)
 	end)
 
 	if not server:is_installed() then
