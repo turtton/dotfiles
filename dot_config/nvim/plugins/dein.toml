@@ -50,6 +50,10 @@ repo = 'nvim-treesitter/nvim-treesitter'
 hook_post_update = 'TSUpdate'
 hook_post_source = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/treesitter.lua'"
 
+# rust
+[[plugins]]
+repo = 'simrat39/rust-tools.nvim'
+
 # ==== useful utils ====
 #file-tree
 [[plugins]]
@@ -73,9 +77,20 @@ rev = 'stable'
 hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/mini.lua'"
 
 #browser integration
+#[[plugins]]
+#repo = 'glacambre/firenvim'
+#hook_post_update = "call firenvim#install(0)"
+
+# fuzzy finder
 [[plugins]]
-repo = 'glacambre/firenvim'
-hook_post_update = "call firenvim#install(0)"
+repo = 'nvim-telescope/telescope.nvim'
+hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/telescope.vim'"
+[[plugins]]
+repo = 'nvim-telescope/telescope-ui-select.nvim'
+
+# debugger
+[[plugins]]
+repo = 'mfussenegger/nvim-dap'
 
 # ====== git ======
 [[plugins]]
