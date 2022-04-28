@@ -29,6 +29,21 @@ hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
 repo			= 'williamboman/nvim-lsp-installer'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
 
+# show signature
+[[plugins]]
+repo = 'matsui54/denops-popup-preview.vim'
+hook_add = 'call popup_preview#enable()'
+[[plugins]]
+repo = 'matsui54/denops-signature_help'
+hook_add = 'call signature_help#enable()'
+
+# text edit
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip'
+hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/vsnip.vim'"
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip-integ'
+
 # syntax highlight
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
