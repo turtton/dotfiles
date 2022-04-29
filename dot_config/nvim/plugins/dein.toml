@@ -19,6 +19,9 @@ repo = 'vim-denops/denops.vim'
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
 hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/devicons.lua'"
+# serching like grep
+[[plugins]]
+repo = 'BurntSushi/ripgrep'
 
 # ====== lsp =========
 [[plugins]]
