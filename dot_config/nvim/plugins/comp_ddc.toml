@@ -20,9 +20,13 @@ repo = 'vim-skk/skkeleton'
 hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/skkeleton.vim'"
 
 # other
-# scala LS
+# scala
 [[plugins]]
 repo = 'scalameta/nvim-metals'
 depends = ['plenary.nvim']
 hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/metals.vim'"
 
+# rust
+[[plugins]]
+repo = 'simrat39/rust-tools.nvim'
+hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/rust-tools.lua'"

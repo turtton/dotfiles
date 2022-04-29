@@ -50,11 +50,6 @@ repo = 'nvim-treesitter/nvim-treesitter'
 hook_post_update = 'TSUpdate'
 hook_post_source = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/treesitter.lua'"
 
-# rust
-[[plugins]]
-repo = 'simrat39/rust-tools.nvim'
-hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/rust-tools.lua'"
-
 # ==== useful utils ====
 #file-tree
 [[plugins]]
