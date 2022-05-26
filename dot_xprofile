@@ -5,3 +5,8 @@
 if command -v feh &> /dev/null; then
 	sh ~/.fehbg
 fi
+
+{{- if eq .chezmoi.hostname "bridgetop" }}
+# Set qt platform
+export QT_QPA_PLATFORMTHEME="qt5ct"
+{{- end }}
