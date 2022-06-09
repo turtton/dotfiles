@@ -9,4 +9,5 @@ fi
 {{- if eq .chezmoi.hostname "bridgetop" }}
 # Set qt platform
 export QT_QPA_PLATFORMTHEME="qt5ct"
+brightnessctl s 20%
 {{- end }}
