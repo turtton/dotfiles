@@ -117,5 +117,6 @@ bindkey -M viins "^M" my_globalalias
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pins="sudo pacman -S"
 alias pupd="sudo pacman -Syu"
+alias prm="sudo pacman -Rsn"
 alias ains="paru -S"
 alias aupd="paru -Syu"
