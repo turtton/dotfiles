@@ -20,7 +20,7 @@ set nolist
 set showmatch
 
 " allow mouse
-set mouse
+set mouse=a
 
 " indents
 set noexpandtab
