@@ -29,8 +29,11 @@ repo		= 'neovim/nvim-lspconfig'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
 
 [[plugins]]
-repo			= 'williamboman/nvim-lsp-installer'
+repo			= 'williamboman/mason.nvim'
 hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua'"
+
+[[plugins]]
+repo			= 'williamboman/mason-lspconfig.nvim'
 
 # show signature
 [[plugins]]
