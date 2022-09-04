@@ -82,7 +82,7 @@ mason_lspconfig.setup_handlers({
 				},
 			}
 			-- server:attach_buffers()
-			require("rust-tools").start_standalone_if_required()
+			-- require("rust-tools").start_standalone_if_required()
 	 else
 		server.setup(opts)
 	 end
