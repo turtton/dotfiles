@@ -29,7 +29,7 @@ vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<C
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local function on_attach(_, bufnr)
+local function on_attach_func(_, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -57,7 +57,7 @@ mason_lspconfig.setup_handlers({
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities.textDocument.completion.completionItem.snippetSupport = true
 		local opts = {
-			on_attach = on_attach,
+			on_attach = on_attach_func,
 		  capabilities = capabilities
 	 }
 
@@ -76,9 +76,14 @@ mason_lspconfig.setup_handlers({
 	 end
 
 	 if server_name == "rust_analyzer" then
-			require("rust-tools").setup {
+		 local rt = require("rust-tools")
+		 rt.setup {
 				server = {
-					on_attach = on_attach,
+					on_attach = function (any, bufnr)
+						on_attach_func(any, bufnr)
+						vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+						vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+					end,
 				},
 			}
 			-- server:attach_buffers()
