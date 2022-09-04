@@ -1,6 +1,6 @@
 " Customize global settings
 call ddc#custom#patch_global('sources', ['nvim-lsp', 'around', 'zsh', 'skkeleton'])
-"call ddc#custom#patch_global('completionMenu', 'pum.vim')
+call ddc#custom#patch_global('completionMenu', 'pum.vim')
 " Change source options
 call ddc#custom#patch_global('sourceOptions', {
       \ '_': {
@@ -28,12 +28,12 @@ call ddc#custom#patch_global('sourceOptions', {
 
 " <TAB>: completion.
 inoremap <silent><expr> <TAB>
-\ ddc#map#pum_visible() ? '<C-n>' :
+\ ddc#map#pum_visible() ? '<Cmd>call pum#map#insert_relative(+1)<CR>' :
 \ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
 \ '<TAB>' : ddc#map#manual_complete()
 
 " <S-TAB>: completion back.
-inoremap <expr><S-TAB>  ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
+inoremap <expr><S-TAB>  ddc#map#pum_visible() ? '<Cmd>call pum#map#insert_relative(-1)<CR>' : '<C-h>'
 
 " Use ddc.
 call ddc#enable()

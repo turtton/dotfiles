@@ -29,7 +29,6 @@ repo = 'BurntSushi/ripgrep'
 # ====== lsp =========
 [[plugins]]
 repo		= 'neovim/nvim-lspconfig'
-hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspconfig.lua'"
 
 [[plugins]]
 repo			= 'williamboman/mason.nvim'
