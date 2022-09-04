@@ -30,3 +30,7 @@ hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/metals.vim'"
 [[plugins]]
 repo = 'simrat39/rust-tools.nvim'
 hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/rust-tools.lua'"
+
+# qml
+[[plugins]]
+repo = 'peterhoeg/vim-qml'
