@@ -20,7 +20,7 @@ map <leader>i ~hi
 " Remove selection and toggle case. E.g. `v2l<leader>u`: `getProperty` -> `property`
 vmap <leader>u d~h
 
-" Move visual line by default(https://zenn.dev/mattn/articles/83c2d4c7645faa)
+" Move visual line like{gjjj(up 3 visual line)}(https://zenn.dev/mattn/articles/83c2d4c7645faa)
 nmap j gj<SID>g
 nmap k gk<SID>g
 nnoremap <script> <SID>gj gj<SID>g
