@@ -8,6 +8,10 @@ require'nvim-treesitter.configs'.setup {
 
   ignore_install = {},
 
+	indent = {
+		enable = true,
+	},
+
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
