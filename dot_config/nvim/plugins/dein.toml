@@ -1,6 +1,9 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+
 #  -- theme --
 [[plugins]]
 repo = 'rebelot/kanagawa.nvim'
