@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-tile '/home/bbridge/wallpapers/fetch.png'
+feh --no-fehbg --bg-tile '/home/bbridge/.local/share/plasma/look-and-feel/Utterly-Sweet/contents/splash/images/background.jpg'
