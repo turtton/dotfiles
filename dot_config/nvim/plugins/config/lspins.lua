@@ -14,7 +14,7 @@ mason.setup({
 })
 
 mason_lspconfig.setup({
-	ensure_installed = {'sumneko_lua', 'vimls', 'bashls', 'nimls', 'taplo', 'yamlls', 'tsserver', 'jsonls', 'kotlin_language_server', 'rust_analyzer'},
+	ensure_installed = {'sumneko_lua', 'vimls', 'bashls', 'nimls', 'taplo', 'yamlls', 'tsserver', 'jsonls', 'kotlin_language_server', 'rust_analyzer', 'clangd'},
 	atomatic_installation = { exclude = { "rust_analyzer" } },
 })
 
