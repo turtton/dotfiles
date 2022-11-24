@@ -58,6 +58,10 @@ repo = 'nvim-treesitter/nvim-treesitter'
 hook_post_update = 'TSUpdate'
 hook_post_source = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/treesitter.lua'"
 
+# platformIO integration
+[[plugins]]
+repo			= 'normen/vim-pio'
+
 # ==== useful utils ====
 #file-tree
 [[plugins]]
