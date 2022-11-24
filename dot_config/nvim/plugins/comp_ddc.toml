@@ -4,6 +4,8 @@ hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/ddc.vim'"
 
 # ddc addons
 [[plugins]]
+repo = 'Shougo/ddc-ui-native'
+[[plugins]]
 repo = 'Shougo/ddc-nvim-lsp'
 [[plugins]]
 repo = 'Shougo/ddc-around'
