@@ -32,6 +32,10 @@ hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/metals.vim'"
 # Settings are wrriten in lspins.lua
 [[plugins]]
 repo = 'simrat39/rust-tools.nvim'
+[[plugins]]
+repo = 'saecki/crates.nvim'
+depends = ['plenary.nvim']
+hook_add = "lua require('crates').setup()"
 
 # qml
 [[plugins]]
