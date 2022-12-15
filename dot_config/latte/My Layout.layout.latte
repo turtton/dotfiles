@@ -9,7 +9,7 @@ enableKWinEdges=true
 formfactor=2
 immutability=1
 isPreferredForShortcuts=false
-lastScreen=13
+lastScreen=12
 layoutId=
 location=4
 name=Default Dock
@@ -31,9 +31,12 @@ plugin=org.kde.latte.plasmoid
 PreloadWeight=0
 
 [Containments][1][Applets][2][Configuration][General]
+animationNewWindowSliding=false
+hoverAction=PreviewWindows
 isInLatteDock=true
 launchers59=applications:org.kde.dolphin.desktop,applications:vivaldi-snapshot.desktop
 leftClickAction=PreviewWindows
+showOnlyCurrentActivity=false
 
 [Containments][1][Applets][3]
 immutability=1
@@ -50,10 +53,10 @@ DialogWidth=586
 PreloadWeight=0
 
 [Containments][1][General]
+activeWindowFilter=FromAllScreens
 advanced=false
 alignmentUpgraded=true
 appletOrder=2;3
-configurationSticker=true
 lastWindowsVisibilityMode=6
 panelSize=3
 panelTransparency=49
@@ -72,6 +75,10 @@ customType=
 enabled=true
 type=org.kde.latte.default
 
+[Containments][1][Indicator][org.kde.latte.plasma][General]
+clickedAnimationEnabled=true
+reversed=true
+
 [LayoutSettings]
 activities={0}
 backgroundStyle=0
@@ -83,7 +90,7 @@ icon=
 lastUsedActivity=7ef97fa8-e655-4ce8-9573-fe85ee6a8bc0
 launchers=
 popUpMargin=-1
-preferredForShortcutsTouched=false
+preferredForShortcutsTouched=true
 schemeFile=
 showInMenu=true
 version=2
