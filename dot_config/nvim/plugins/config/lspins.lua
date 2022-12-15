@@ -81,7 +81,7 @@ mason_lspconfig.setup_handlers({
 				server = {
 					on_attach = function (any, bufnr)
 						on_attach_func(any, bufnr)
-						vim.keymap.set("n", "<Leader><C-a>", rt.hover_actions.hover_actions, { buffer = bufnr })
+						vim.keymap.set("n", "<Leader>A", rt.hover_actions.hover_actions, { buffer = bufnr })
 						vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
 					end,
 				},
