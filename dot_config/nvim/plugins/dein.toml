@@ -40,17 +40,18 @@ repo			= 'williamboman/mason-lspconfig.nvim'
 # show signature
 [[plugins]]
 repo = 'matsui54/denops-popup-preview.vim'
+depends = ['pum.vim']
 hook_add = 'call popup_preview#enable()'
 [[plugins]]
 repo = 'matsui54/denops-signature_help'
 hook_add = 'call signature_help#enable()'
 
 # text edit
-[[plugins]]
-repo = 'hrsh7th/vim-vsnip'
-hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/vsnip.vim'"
-[[plugins]]
-repo = 'hrsh7th/vim-vsnip-integ'
+# [[plugins]]
+# repo = 'hrsh7th/vim-vsnip'
+# hook_add = "exec 'source' . g:PLUGIN_CONFIG_DIR . '/vsnip.vim'"
+# [[plugins]]
+# repo = 'hrsh7th/vim-vsnip-integ'
 
 # syntax highlight
 [[plugins]]
