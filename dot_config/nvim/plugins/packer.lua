@@ -21,6 +21,9 @@ vim.cmd([[
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
+	-- I don't know why but plenary should install here(requires section does not work :thinking:)
+	use 'nvim-lua/plenary.nvim'
+
 	-- theme --
 	use {
 		'rebelot/kanagawa.nvim',
@@ -75,13 +78,14 @@ return require('packer').startup(function(use)
 	}
 	use {
 		'simrat39/rust-tools.nvim',
-	--	opt = true,
-	--	ft = { 'rs', 'toml' },
+		--	opt = true,
+		--	ft = { 'rs', 'toml' },
 		requires = {
 			{ 'mfussenegger/nvim-dap' },
 			{
 				'saecki/crates.nvim',
-		requires = { 'nvim-lua/plenary.nvim' },
+				tag = 'v0.3.0',
+				requires = 'nvim-lua/plenary.nvim',
 				config = function() require('crates').setup() end
 			}
 		}
@@ -103,7 +107,8 @@ return require('packer').startup(function(use)
 	-- git --
 	use {
 		'lewis6991/gitsigns.nvim',
-		config = "vim.cmd[[exec 'source' . g:PLUGIN_CONFIG_DIR . '/gitsigns.lua']]"
+		config = "vim.cmd[[exec 'source' . g:PLUGIN_CONFIG_DIR . '/gitsigns.lua']]",
+		requires = 'nvim-lua/plenary.nvim'
 	}
 
 	-- utils --
@@ -131,8 +136,12 @@ return require('packer').startup(function(use)
 	-- fuzzy finder
 	use {
 		'nvim-telescope/telescope.nvim',
+		tag = '0.1.0',
 		config = "vim.cmd[[exec 'source' . g:PLUGIN_CONFIG_DIR . '/telescope.vim']]",
-		requires = { 'nvim-telescope/telescope-ui-select.nvim' }
+		requires = {
+			{ 'nvim-lua/plenary.nvim' },
+			{ 'nvim-telescope/telescope-ui-select.nvim' }
+		}
 	}
 
 	-- Put this at the end after all plugins
