@@ -31,12 +31,12 @@ return require('packer').startup(function(use)
 	}
 
 	-- lsp --
+	use 'neovim/nvim-lspconfig'
 	use {
 		'williamboman/mason.nvim',
 		config = "vim.cmd[[exec 'source' . g:PLUGIN_CONFIG_DIR . '/lspins.lua']]",
 		requires = {
-			{ 'williamboman/mason-lspconfig.nvim' },
-			{ 'neovim/nvim-lspconfig' }
+			{ 'williamboman/mason-lspconfig.nvim' }
 		}
 	}
 
@@ -59,12 +59,13 @@ return require('packer').startup(function(use)
 			},
 			{
 				'matsui54/denops-popup-preview.vim',
-				requires = { 'Shougo/pum.vim' },
+				requires = { 'Shougo/pum.vim', 'vim-denops/denops.vim' },
 				config = "vim.fn['popup_preview#enable']()"
 			},
 			{
 				'matsui54/denops-signature_help',
-				config = "vim.fn['signature_help#enable']()"
+				config = "vim.fn['signature_help#enable']()",
+				requires = 'vim-denops/denops.vim'
 			}
 		}
 	}
