@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "kanagawa"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -171,6 +171,37 @@ lvim.builtin.treesitter.highlight.enable = true
 --       cmd = "TroubleToggle",
 --     },
 -- }
+lvim.plugins = {
+  "rebelot/kanagawa.nvim",
+  "simrat39/rust-tools.nvim",
+  {
+    "saecki/crates.nvim",
+    tag = "v0.3.0",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("crates").setup {
+        null_ls = {
+          enabled = true,
+          name = "crates.nvim",
+        },
+        popup = {
+          border = "rounded",
+        },
+      }
+    end,
+  },
+  {
+    "j-hui/fidget.nvim",
+    config = function()
+      require("fidget").setup()
+    end,
+  },
+  {
+    "peterhoeg/vim-qml",
+    event = "BufRead",
+    ft = { "qml" },
+  },
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
@@ -295,35 +326,4 @@ lvim.builtin.which_key.mappings["C"] = {
   i = { "<cmd>lua require'crates'.show_crate_popup()<cr>", "[crates] show info" },
   f = { "<cmd>lua require'crates'.show_features_popup()<cr>", "[crates] show features" },
   D = { "<cmd>lua require'crates'.show_dependencies_popup()<cr>", "[crates] show dependencies" },
-}
-
-lvim.plugins = {
-  "simrat39/rust-tools.nvim",
-  {
-    "saecki/crates.nvim",
-    tag = "v0.3.0",
-    requires = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("crates").setup {
-        null_ls = {
-          enabled = true,
-          name = "crates.nvim",
-        },
-        popup = {
-          border = "rounded",
-        },
-      }
-    end,
-  },
-  {
-    "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup()
-    end,
-  },
-  {
-    "peterhoeg/vim-qml",
-    event = "BufRead",
-    ft = { "qml" },
-  },
 }
