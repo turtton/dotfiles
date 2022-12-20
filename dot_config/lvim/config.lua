@@ -173,6 +173,7 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 lvim.plugins = {
   "rebelot/kanagawa.nvim",
+  "wakatime/vim-wakatime",
   "simrat39/rust-tools.nvim",
   {
     "saecki/crates.nvim",
