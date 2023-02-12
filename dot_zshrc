@@ -120,5 +120,6 @@ alias pupd="sudo pacman -Syu"
 alias prm="sudo pacman -Rsn"
 alias ains="paru -S"
 alias aupd="paru -Syu"
+alias tenki="curl wttr.in/Uji"
 
 if [ -e /home/turtton/.nix-profile/etc/profile.d/nix.sh ]; then . /home/turtton/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
