@@ -18,7 +18,12 @@ lvim.colorscheme = "kanagawa"
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+-- lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["ss"] = ":split<CR>"
+lvim.keys.normal_mode["sv"] = ":vsplit<CR>"
+lvim.keys.normal_mode["st"] = ":tabedit<CR>"
+lvim.keys.normal_mode["sn"] = ":tabnext<CR>"
+lvim.builtin.terminal.open_mapping = "<c-t>"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
