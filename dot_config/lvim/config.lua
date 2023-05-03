@@ -174,6 +174,22 @@ lvim.builtin.treesitter.highlight.enable = true
 lvim.plugins = {
   "rebelot/kanagawa.nvim",
   "wakatime/vim-wakatime",
+  {
+    "vim-skk/skkeleton",
+    requires = { "vim-denops/denops.vim" },
+    config = function()
+      lvim.keys.normal_mode["<C-j>"] = "<Plug>(skkeleton-toggle)"
+      lvim.keys.insert_mode["<C-j>"] = false
+      lvim.keys.insert_mode["<C-j>"] = "<Plug>(skkeleton-toggle)"
+    end
+  },
+  {
+    "rinx/cmp-skkeleton",
+    dependencies = { "vim-skk/skkeleton", "hrsh7th/nvim-cmp" },
+    config = function()
+      table.insert(lvim.builtin.cmp.sources, { name = "skkeleton" })
+    end
+  },
   "simrat39/rust-tools.nvim",
   {
     "saecki/crates.nvim",
