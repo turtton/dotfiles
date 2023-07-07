@@ -179,6 +179,7 @@ lvim.builtin.treesitter.highlight.enable = true
 lvim.plugins = {
   "rebelot/kanagawa.nvim",
   "wakatime/vim-wakatime",
+  "github/copilot.vim",
   {
     "vim-skk/skkeleton",
     requires = { "vim-denops/denops.vim" },
