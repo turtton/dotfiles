@@ -1,0 +1,9 @@
+customCommands:
+  - key: 'M'
+    command: 'gitmoji -c'
+    context: 'commits'
+    subprocess: true
+    loadingText: 'Opening gitmoji'
+    description: 'commit with gitmoji'
+    stream: false
+    showOutput: false
