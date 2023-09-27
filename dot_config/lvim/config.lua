@@ -213,6 +213,8 @@ lvim.plugins = {
       }
     end,
   },
+  "sheerun/vim-polyglot",
+  "purescript-contrib/purescript-vim",
   {
     "j-hui/fidget.nvim",
     config = function()
