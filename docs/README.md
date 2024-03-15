@@ -1,14 +1,5 @@
 # Tips
 
-# 1password 
-
-### browser extension does not work
-
-- create file in /etc/1password/custom_allowed_browsers
-	```
-	vivaldi-bin
-	```
-
 # KDE
 
 ## plasma

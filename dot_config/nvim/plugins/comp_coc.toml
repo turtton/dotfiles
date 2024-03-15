@@ -1,4 +1,0 @@
-[[plugins]]
-repo			= 'neoclide/coc.nvim'
-rev				= 'release'
-hook_add	= "exec 'source' . g:PLUGIN_CONFIG_DIR . '/coc.vim'"
